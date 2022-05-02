@@ -1,0 +1,36 @@
+
+spring:
+  application:
+    name: vote-api
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  jmx:
+    enabled: false
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/vote-session?allowPublicKeyRetrieval=true&sslMode=DISABLED
+    username: root
+    password: 123
+  devtools:
+    restart:
+      enabled: false
+    livereload:
+      enabled: false
+
+server:
+  servlet:
+    context-path: /vote-api
+
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  show-actuator: true
+
+
+management:
+  server:
+    port: 9090
+
